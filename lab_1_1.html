@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Лабораторная работа 1.1</title>
+    </head>
+    <body>
+        <h1 style="color: teal;">Лабораторная работа 1.1</h1>
+        <h2>
+            <script>
+                "use strict";
+                
+                let tempC = parseFloat( prompt("Введите температуру в Цельсиях: ", "100") );
+                let tempF = tempC * 9 / 5 + 32;
+                console.log( "Заданная температура в Цельсиях: " + tempC);
+                document.writeln( "Заданная температура в Цельсиях: " + tempC);
+                document.write("<br>");
+                console.log( "Температура в Фаренгейтах: " + tempF);
+                document.writeln( "Температура в Фаренгейтах: " + tempF);
+                document.write("<br>");
+                console.log( "Температура в Фаренгейтах: ~" + tempF.toFixed(2) );
+                document.write( "Температура в Фаренгейтах: ~" + tempF.toFixed(2) );
+            </script>
+        </h2>
+    </body>
+</html>
