@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная работа 2.2</title>
+</head>
+
+<body>
+    <h1 style="color: teal;">Лабораторная работа 2.2</h1>
+    <h2>
+        <script>
+            "use strict";
+
+            let countCrows = parseInt(prompt("Введите количество ворон на ветке: ", ""));
+            let result;
+            if (isNaN(countCrows)) {
+                result = "Введено не число!";
+            }
+            else {
+                let nameCrow;
+                let countCrows2 = countCrows % 100;
+
+                if (countCrows2 >= 11 && countCrows2 <= 14)
+                    nameCrow = "ворон";
+                else {
+                    switch (countCrows % 10) {
+                        //switch (countCrows) {
+                        case 1:
+                            nameCrow = "ворона";
+                            break;
+                        case 2:
+                        case 3:
+                        case 4:
+                            nameCrow = "вороны";
+                            break;
+                        default:
+                            nameCrow = "ворон";
+                    }
+                }
+                result = `На ветке ${countCrows} ${nameCrow}!`;
+            }
+            console.log(result);
+            document.write(result);
+        </script>
+    </h2>
+</body>
+
+</html>

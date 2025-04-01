@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная работа 2.4</title>
+</head>
+
+<body>
+    <h1 style="color: teal;">Лабораторная работа 2.4</h1>
+    <h2>
+        <script>
+            "use strict";
+
+            let number, number1, number2;
+            number = number1 = number2 = 1;
+            
+            document.write("Числа Фибоначчи до 10000:");
+            document.write("<br>");
+
+            while (number < 10000) {
+                document.write(number);
+                document.write("<br>");
+                number1 = number2;
+                number2 = number;
+                number = number1 + number2;
+            }
+
+        </script>
+    </h2>
+</body>
+
+</html>
