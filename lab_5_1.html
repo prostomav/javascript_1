@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная работа 5.1</title>
+</head>
+
+<body>
+    <h1 style="color: teal;">Лабораторная работа 5.1</h1>
+    <h2>
+        <script>
+            "use strict";
+
+            class Href {
+                title;
+                url;
+                constructor(title, url) {
+                    this.title = title;
+                    this.url = url;
+                }
+                render(openInNewWindow) {
+                    return (`<a href=${this.url} ${openInNewWindow ? 'target="_blank"' : ''}>${this.title}</a>`);
+                    if (!openInNewWindow)
+                        return (`<a href=${this.url}>${this.title}</a>`);
+                    else
+                        return (`<a href=${this.url} target="_blank">${this.title}</a>`);
+                }
+            }
+
+            let href1 = new Href('Specialist', 'https://specialist.ru');
+            let href2 = new Href('Crypto Pro', 'https://cryptopro.ru');
+
+            document.write(href1.render());
+            document.write("<br>");
+            document.write(href2.render(1));
+
+        </script>
+    </h2>
+</body>
+
+</html>
